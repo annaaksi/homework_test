@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Best Games</title>
+</head>
+<body>
+<section>
+    <header>
+        <div>
+            <h1>Лучшие игры</h1>
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Лучшие игры в истории человечества</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+    </header>
+</section>
+<section>
+    <article>
+        <div>
+            <h3>Игры</h3>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Название</th>
+                        <th>Год выпуска</th>
+                        <th>Разработчик</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ведьмак 3</td>
+                        <td>2015</td>
+                        <td>CD Project Red</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Atomic Heart</td>
+                        <td>2023</td>
+                        <td>Mundfish</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>The Last of Us</td>
+                        <td>2013</td>
+                        <td>Sony</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>
+<section>
+    <div>
+        <h3>Игры</h3>
+    </div>
+    <div>
+        <form method="POST" action="#">
+            <div>
+                <input type="text" name="name" placeholder="Название">
+            </div>
+            <div>
+                <input type="number" name="year" placeholder="Год выпуска">
+            </div>
+            <div>
+                <select name="developer">
+                    <option disabled selected>Выберите разработчика</option>
+                    <option value="1">CD Project Red</option>
+                    <option value="2">Mundfish</option>
+                    <option value="3">Sony</option>
+                    <option value="3">Rockstar Games</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="add">
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>

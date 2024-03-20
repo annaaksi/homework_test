@@ -1,0 +1,69 @@
+Задача 1
+
+CREATE TABLE firs_db.students (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(45) NOT NULL,
+  surname VARCHAR(45) NOT NULL,
+  year DATE NOT NULL,
+  average_grade FLOAT NULL,
+  PRIMARY KEY (id))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+Задача 2
+
+CREATE TABLE firs_db.books (
+  id INT NOT NULL,
+  name VARCHAR(45) NULL,
+  author VARCHAR(45) NULL,
+  year INT NULL,
+  genre VARCHAR(45) NULL,
+  PRIMARY KEY (id))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+Задача 3
+
+INSERT INTO firs_db.books (name, author, year, genre) VALUES ('Повелитель мух', 'Уильям Голдинг', '1954', 'Роман');
+
+Задача 4
+
+UPDATE firs_db.products 
+SET price = price*1.1
+WHERE price < 1000;
+
+Задача 5
+
+SELECT product_name, price FROM firs_db.products ORDER BY price DESC LIMIT 3;
+
+Задача 6
+
+DELETE FROM firs_db.employees WHERE (departament_id = '3');
+
+? Задача 7
+
+CREATE TABLE firs_db.students(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(45),
+course_id INT,
+FOREIGN KEY (course_id) REFERENCES courses (id) ON DELETE CASCADE);
+
+Задача 8
+
+SELECT departament_id, COUNT(employee_id)
+FROM employees GROUP BY departament_id;
+
+Задача 9
+
+SELECT students.student_name, groups.group_name
+FROM students
+INNER JOIN groups 
+ON students.group_id = groups.group_id;
+
+Задача 10
+
+SELECT books.title, authors.author_name
+FROM books
+INNER JOIN author_book 
+ON books.id = author_book.book_id
+INNER JOIN authors
